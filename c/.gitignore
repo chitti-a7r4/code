@@ -1,1 +1,7 @@
 *.exe
+git rm -rf --cached .
+git add .
+git commit -m "initial commit"
+git push
+hi.exe
+vote.exe
