@@ -16,3 +16,5 @@
 // we can write:
 // int time = 20;
 // (time < 18) ? printf("Good day.") : printf("Good evening.");
+
+// important:: for continue we should add the addition or substraction of the integer back before continue in a while loop
