@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "math",
+            "request": "launch",
+            "mainClass": "math",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "displayvar",
+            "request": "launch",
+            "mainClass": "displayvar",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
             "name": "First",
             "request": "launch",
             "mainClass": "First",
