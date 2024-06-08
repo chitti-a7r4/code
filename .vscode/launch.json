@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "userscore",
+            "request": "launch",
+            "mainClass": "userscore",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "random",
+            "request": "launch",
+            "mainClass": "random",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "area",
+            "request": "launch",
+            "mainClass": "area",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
             "name": "math",
             "request": "launch",
             "mainClass": "math",
