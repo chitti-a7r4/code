@@ -3,6 +3,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "day",
+            "request": "launch",
+            "mainClass": "day",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "doorCode",
+            "request": "launch",
+            "mainClass": "doorCode",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "voteage",
+            "request": "launch",
+            "mainClass": "voteage",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "javamath",
+            "request": "launch",
+            "mainClass": "javamath",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
             "name": "logicop",
             "request": "launch",
             "mainClass": "logicop",
