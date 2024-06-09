@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "logicop",
+            "request": "launch",
+            "mainClass": "logicop",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
             "name": "userscore",
             "request": "launch",
             "mainClass": "userscore",
