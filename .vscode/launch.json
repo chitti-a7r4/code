@@ -3,6 +3,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "intotable",
+            "request": "launch",
+            "mainClass": "intotable",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "tencount",
+            "request": "launch",
+            "mainClass": "tencount",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "forloop",
+            "request": "launch",
+            "mainClass": "forloop",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "diceCount",
+            "request": "launch",
+            "mainClass": "diceCount",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "happyny",
+            "request": "launch",
+            "mainClass": "happyny",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "countdown",
+            "request": "launch",
+            "mainClass": "countdown",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "dowhile",
+            "request": "launch",
+            "mainClass": "dowhile",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
+            "name": "loop",
+            "request": "launch",
+            "mainClass": "loop",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
             "name": "day",
             "request": "launch",
             "mainClass": "day",
