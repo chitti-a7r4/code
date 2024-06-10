@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>This website is created by Shiva Sai</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .event-timer {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        .event-timer h1 {
+            margin: 0 0 20px 0;
+        }
+        .event-timer span {
+            font-size: 24px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="event-timer">
+        <h1>Countdown to August 7, 2024</h1>
+        <h1>Created by Shiva Sai</h1>
+        <span id="days">00</span> days
+        <span id="hours">00</span> hours
+        <span id="minutes">00</span> minutes
+        <span id="seconds">00</span> seconds
+    </div>
+
+    <script>
+        function countdownTimer(endtime) {
+            let timerInterval = setInterval(function() {
+                let t = Date.parse(endtime) - Date.parse(new Date());
+                let seconds = Math.floor((t / 1000) % 60);
+                let minutes = Math.floor((t / 1000 / 60) % 60);
+                let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+                let days = Math.floor(t / (1000 * 60 * 60 * 24));
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
+
+                if (t <= 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById("days").innerHTML = "00";
+                    document.getElementById("hours").innerHTML = "00";
+                    document.getElementById("minutes").innerHTML = "00";
+                    document.getElementById("seconds").innerHTML = "00";
+                }
+            }, 1000);
+        }
+
+        countdownTimer('2024-08-07');
+    </script>
+</body>
+</html>
