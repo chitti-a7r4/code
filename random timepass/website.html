@@ -11,6 +11,8 @@
             min-height: 100vh;
             font-family: Arial, sans-serif;
             background-image: url(kim.jpg);
+            background-size: cover;
+            background-position: center;
         }
         .event-timer {
             background: #ffffff;
@@ -25,6 +27,23 @@
         .event-timer span {
             font-size: 24px;
             margin: 0 10px;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 600px) {
+            body {
+                background-size: contain;
+            }
+            .event-timer {
+                padding: 20px;
+            }
+            .event-timer h1 {
+                font-size: 18px;
+            }
+            .event-timer span {
+                font-size: 18px;
+                margin: 0 5px;
+            }
         }
     </style>
 </head>
