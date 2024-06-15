@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ageaverage",
+            "request": "launch",
+            "mainClass": "ageaverage",
+            "projectName": "code_126a47c"
+        },
+        {
+            "type": "java",
             "name": "intotable",
             "request": "launch",
             "mainClass": "intotable",
