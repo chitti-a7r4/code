@@ -14,6 +14,7 @@ void main() {
   var Removedplanet = (planets.remove(9));
   planets.removeWhere((key, value) {
     return key % 2 != 0;
+    // return value.length < 5;
   });
   print(planets);
   print("$Removedplanet is removed");
