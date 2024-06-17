@@ -2,8 +2,8 @@ void main() {
   var biography = BookItem("Shoe dog", 299);
   var story =
       Types(["Sci-fi", "Fiction", "History"], "Magic Tree house", 150.2);
-  print(biography.goodlooking());
-  print(story.goodlooking());
+  print(biography);
+  print(story);
 }
 
 class BookItem {
@@ -12,6 +12,11 @@ class BookItem {
   BookItem(this.bookName, this.price);
   String goodlooking() {
     return "$bookName --> $price";
+  }
+
+  @override
+  String toString() {
+    return goodlooking();
   }
 }
 
@@ -25,5 +30,10 @@ class Types extends BookItem {
       goodlookingCategories = '$goodlookingCategories $c';
     }
     return '$bookName --> $price \n$goodlookingCategories';
+  }
+
+  @override
+  String toString() {
+    return "Instance of Book : $bookName,$price,$categories";
   }
 }
