@@ -1,6 +1,5 @@
 void main() {
-  var icecream = Flavours(["Choco", "Strawberry", "Watermelon"], "Vanilla",
-      30); //check whether things inside arrays are seperately kept in comma
+  var icecream = Flavours(["Choco", "Strawberry", "Watermelon"], "Vanilla", 30);
   var pizza = MenuItem("pizza", 200);
   var burger = MenuItem("Chicken", 99);
   var desert = MenuItem("Black Forest", 50);
@@ -42,12 +41,18 @@ class Flavours extends MenuItem {
     for (final f in flavour) {
       typesofflavours = '$typesofflavours $f';
     }
+
     return '$itemName is ₹$price, and $typesofflavours';
+  }
+
+  String suggestRandom() {
+    flavour.shuffle();
+    return flavour.isNotEmpty ? flavour[0] : 'Sorry ,No flavour available';
   }
 
   @override
   String toString() {
-    return 'Your random suggestion is : $itemName,$price,$flavour';
+    return 'Your random suggestion is : $itemName with ${suggestRandom()} flavour'; //curly braces because its a list
   }
 }
 
