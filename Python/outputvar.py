@@ -1,5 +1,6 @@
 x = "Python"
-y = "is"
+y = 3
 z = "awesome"
-#print(x, y, z)
-print(x + y + z)
+print(x, y, z)
+#better to use the , when we have to combine number and string
+#print(x + y + z)
