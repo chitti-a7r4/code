@@ -1,5 +1,6 @@
 
 def afun():
-  global x = "hello"
+  global x
+  x = "hello"
 afun()
 print(x)
