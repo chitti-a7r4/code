@@ -2,9 +2,9 @@ x = 3
 y = 4.3
 z = 5j
 
-a = complex(x)
+a = float(x)
 b = int(y)
-c = float(z)
+c = complex(y)
 
 print(a)
 print(b)
