@@ -1,6 +1,9 @@
-x = int(2.0)
-y = int("3")
-z = int(4)
+x = float(2.0)
+y = float("3.9")
+z = float(4.8)
+#x = int(2.0)
+#y = int("3")
+#z = int(4)
 
 print(x)
 print(y)
