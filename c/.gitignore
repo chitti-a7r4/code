@@ -1,2 +1,9 @@
 *.exe
+*.o
+*.out
+*.exe
+*.class
+*.dll
+*.so
+*.dylib
 
