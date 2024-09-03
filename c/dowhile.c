@@ -8,5 +8,4 @@ int main(){
         i++;
     } while (i < 10);
     
-    
 }
