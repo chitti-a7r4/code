@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Out for a date</title>
     <style>
+        body{
+            background-image: url(bg.jpg);
+            background-color: rgba(255,255,255,0.6);
+            /*(background-blend-mode: soft-light;*/
+            justify-content: center;
+            display: flex;
+
+            align-items: center;
+        }
         #myButton1 {
             position: relative;
             top: 21px;
@@ -25,13 +34,17 @@
             border: none;
             cursor: pointer;
         }
+        h1{
+
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    
-<h1>would you like to go on a date with me??</h1>
-<button id ="myButton1" onclick="venue()" >yes</button>
-<button id="myButton2">no</button>
+        <h1>would you like to go on a date with me??</h1>
+        <button id ="myButton1" onclick="venue()" >yes</button>
+        <button id="myButton2">no</button>
+
 
 <script>
     function venue(){

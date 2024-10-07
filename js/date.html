@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You + Me = A Date?</title>
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            background-color: rgba(255, 255, 255, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling when popup is displayed */
+            position: relative; /* To position overlay */
+            font-family: Arial, sans-serif; /* Use a fallback font */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            z-index: 10; /* Ensure the container is above the overlay */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+            position: relative; /* Make this relative for absolute positioning of buttons */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px; /* Added margin for spacing */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+            border-radius: 5px; /* Slight rounding for better aesthetics */
+        }
+
+        button:hover {
+            background-color: #2980b9; /* Darker shade on hover */
+        }
+
+        /* Custom popup style */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 2px solid black;
+            z-index: 1000; /* On top of everything */
+            font-size: 18px;
+            display: none; /* Initially hidden */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for visibility */
+        }
+
+        .popup p {
+            margin: 0 0 10px;
+        }
+
+        /* Overlay style */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            backdrop-filter: blur(5px); /* Blur effect */
+            display: none; /* Initially hidden */
+            z-index: 900; /* Below the popup */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Would you like to go on a date with me?</h1>
+        <div>
+            <button id="myButton1" onclick="venue()">Yes</button>
+            <button id="myButton2" onmouseover="moveButton(this)">No</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup" id="popup" role="dialog" aria-labelledby="popupTitle" aria-modal="true">
+        <h2 id="popupTitle">I knew you'd say yes!😊</h2>
+        <p>Let's meet tomorrow at :<br>Kevin's Corner ,5:30 PM</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        function venue() {
+            // Show overlay and popup
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+            startFireworks(); // Ensure this function is defined if you're using it
+        }
+
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        function moveButton(button) {
+            const container = button.parentElement.parentElement; // Get the container
+            const containerRect = container.getBoundingClientRect(); // Get the dimensions of the container
+            const buttonWidth = button.offsetWidth; // Get the button's width
+            const buttonHeight = button.offsetHeight; // Get the button's height
+
+            // Generate random coordinates within the container
+            const randomX = Math.random() * (containerRect.width - buttonWidth);
+            const randomY = Math.random() * (containerRect.height - buttonHeight);
+
+            // Set the button's new position
+            button.style.position = 'absolute'; // Positioning button absolutely within the container
+            button.style.left = `${randomX}px`;
+            button.style.top = `${randomY}px`;
+        }
+    </script>
+</body>
+
+</html>
