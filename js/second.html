@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Out for a date</title>
+    <style>
+        #myButton1 {
+            position: relative;
+            top: 21px;
+            left: 100px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #myButton2 {
+            position: absolute;
+            top: 100px;
+            left: 340px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+<h1>would you like to go on a date with me??</h1>
+<button id ="myButton1" onclick="venue()" >yes</button>
+<button id="myButton2">no</button>
+
+<script>
+    function venue(){
+        alert("Kevin's Corner\nSunday\n5:30pm");
+    }
+    const button = document.getElementById('myButton2');
+    button.addEventListener('click', () => {
+        // Random new positions
+        const newTop = Math.random() * (window.innerHeight - button.clientHeight);
+        const newLeft = Math.random() * (window.innerWidth - button.clientWidth);
+        
+        // Apply the new position to the button
+        button.style.top = `${newTop}px`;
+        button.style.left = `${newLeft}px`;
+    });
+</script>
+
+</body>
+</html>
