@@ -2,12 +2,12 @@
 
 int main(){
     int age= 40;
-    int* pointer = &age;
+    int* y = &age;
     printf(" Your age %d\n",age);
     printf(" Your age %p\n",&age); //also gives pointer
     // Reference
-    printf(" Your age %p\n",pointer);
+    printf(" Your age %p\n",y);
     // Dereference
-    printf("Your age %d\n",*pointer);
+    printf("Your age %d\n",*y);
     
 }
